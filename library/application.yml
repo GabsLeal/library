@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+gutendex:
+  base-url: https://gutendex.com/books
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/librarydb
+    username: library1
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  main:
+    allow-bean-definition-overriding: true
+  component-scan:
+    base-package: com.moroTechLibrary.library.config
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
